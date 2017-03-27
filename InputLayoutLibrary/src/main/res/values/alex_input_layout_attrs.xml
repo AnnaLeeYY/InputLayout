@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputLayout">
+
+        <attr name="input_function_enum" format="enum">
+            <enum name="input" value="1"/>
+            <enum name="pwdVisibility" value="2"/>
+            <enum name="clearInput" value="3"/>
+        </attr>
+        <attr name="input_pwd_enum" format="enum">
+            <enum name="visible" value="1"/>
+            <enum name="invisible" value="2"/>
+        </attr>
+        <attr name="input_empty_visibility_enum" format="enum">
+            <enum name="visible" value="1"/>
+            <enum name="invisible" value="2"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

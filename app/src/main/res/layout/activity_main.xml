@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alex.inputlayout.MainActivity"
+    tools:ignore="all">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <org.alex.inputlayout.InputRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    style="@style/input_left_1"
+                    android:text="手机号码"/>
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/ivPhoneClear"
+                    android:layout_toRightOf="@+id/tvPhone"
+                    android:background="@null"
+                    android:hint="手机号码"
+                    android:inputType="phone"
+                    android:paddingLeft="16dp"
+                    app:input_function_enum="input"
+                    app:input_pwd_enum="visible"/>
+
+                <ImageView
+                    android:id="@+id/ivPhoneClear"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_input_clear"
+                    app:input_empty_visibility_enum="invisible"
+                    app:input_function_enum="clearInput"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary"
+                    />
+
+            </org.alex.inputlayout.InputRelativeLayout>
+
+            <org.alex.inputlayout.InputRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvPwd"
+                    style="@style/input_left_1"
+                    android:text="密码"/>
+
+                <EditText
+                    android:id="@+id/etPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/ivPwdClear"
+                    android:layout_toRightOf="@+id/tvPwd"
+                    android:background="@null"
+                    android:digits="@string/digits_login_pwd"
+                    android:hint="密码"
+                    android:paddingLeft="16dp"
+                    app:input_function_enum="input"
+                    app:input_pwd_enum="invisible"/>
+
+                <ImageView
+                    android:id="@+id/ivPwdClear"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ivPwdVisibility"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_input_clear"
+                    app:input_empty_visibility_enum="invisible"
+                    app:input_function_enum="clearInput"/>
+
+                <ImageView
+                    android:id="@+id/ivPwdVisibility"
+                    android:layout_width="56dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/selector_input_pwd_visibility_1"
+                    app:input_function_enum="pwdVisibility"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary"
+                    />
+
+            </org.alex.inputlayout.InputRelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

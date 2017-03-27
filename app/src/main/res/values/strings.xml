@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InputLayout</string>
+
+    <string name="digits_login_pwd">_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+</resources>
